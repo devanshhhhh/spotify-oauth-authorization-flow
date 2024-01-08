@@ -3,7 +3,7 @@
 
 
 ## Introduction
-The  applicartion uses an Express JS server that lets you get the authorization token from your user once user logs in with Spotify and grants permissions.
+The  applicartion uses Express JS to create a server that lets you get the authorization token from your user once user logs in with Spotify and grants permissions.
 This token can then be used to make requests on the Spotify API on behalf of user.
 
 
