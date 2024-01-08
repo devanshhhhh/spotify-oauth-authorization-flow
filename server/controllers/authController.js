@@ -9,7 +9,7 @@ const JWT_SECRET=crypto.randomUUID();
 exports.login=(req, res)=>{
     const state=jwt.sign({valid: true}, JWT_SECRET);
 
-    const myScope="user-read-email playlist-modify-public user-read-playback-state user-read-currently-playing";
+    const myScope="user-read-email playlist-modify-public user-read-playback-state user-read-currently-playing";  //Modify scope accordingly (refer to Spotify API documentation)
     const authorizationUrl=`https://accounts.spotify.com/authorize?client_id=${spotifyConfig.clientId}&redirect_uri=${encodeURIComponent(spotifyConfig.redirectUri)}&response_type=code&state=${state}&scope=${myScope}`;
 
     res.redirect(authorizationUrl);
